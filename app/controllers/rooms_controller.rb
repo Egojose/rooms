@@ -16,6 +16,11 @@ class RoomsController < ApplicationController
     end
   end
 
+  def destroy
+    roomdestroy = Room.find(params[:delete])
+    roomdestroy.destroy
+  end
+
   protected
     def room_params
       params.require(:room).permit(:title, :description, :beds, :guests, :price_per_night, :image_url)
