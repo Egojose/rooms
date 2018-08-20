@@ -19,7 +19,7 @@ class RoomsController < ApplicationController
   def destroy
     roomdestroy = Room.find(params[:id])
     roomdestroy.destroy
-    redirect_to '/'
+    redirect_to rooms_path
   end
 
   def edit
